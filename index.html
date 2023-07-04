@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--- meta tag that allows page to be responsive on mobile devices-->
+    <title>geogra.com.na</title> <!---page title appears here---->
+	<meta name="Author" content=""/>
+	<link rel="stylesheet" type="text/css" href="style.css"> <!--- added link to css stylesheet here= link + file name----->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,800;1,600;1,800;1,900&display=swap" rel="stylesheet"> <!---added link for fonts which we acquired from google --->
+	
+	<!---- 4cd awesome icons link pasted here--->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+</head>
+<body>
+<section class="header"> <!------- create a section for the pages and named it header---> 
+    
+    <nav>   <!--- create a nav tag for logo image within the header, img is made with "a" anchor to make it clickable to our index.html--->
+    <a id="no-line" href="index.html"><img src="Images/Logo.png"></a>
+	
+        <!-------- added navlinks as id used by javascript to call ---->
+    <div class="nav-links" id="navLinks"> <!-- added div tag namedd links for the different links --->
+		
+		<i class="fa fa-times" onclick="hideMenu()"></i> <!--- a icon used to close the menu in android mode---> 
+		
+		<!----- we add onclick to add clicking functionality, so when we click on this function it will call on the hide menu method--->
+        
+        <ul> <!--- created lists with a anchor type to make them clickable and with link text ---->
+            <li><a href="index.html">HOME</a>  </li>
+            <li><a href="about.html">ABOUT</a>  </li>
+            <li><a href="Services.html">SERVICES</a>  </li>
+            <li><a href="Blog.html">BLOG</a>  </li>
+            <li><a href="Contact%20Us.html">CONTACT US</a>  </li>
+        
+        
+        
+        
+        </ul>
+        </div>
+		<!---------- pasted a menu icon for the android view--->
+		<!----- we add onclick to add clicking functionality, so when we click on this function it will call on the show menu method--->
+		<i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+		
+		 <!----- create a div tag with class name text box for the central text ---->  
+<div class="text-box"> 
+		<h1> GEOGRA Media & Printing Services </h1> <!---- we make use of the br to break long sentences apart --->
+	<p>We are an integrated company with multidisciplinary solutions and experiences.<br> Over the years, we have worked
+with our partners and clients from project conceptualization, planning,<br> designing and implementation and
+helped our customers achieved their desired goal.<br> We cover a wide variety of digital devices, applications and
+after sale technical support including Point of Sale (POS) devices,<br> immersive display, audio visual, automation
+and control, interactive system and digital signage. </p>
+	
+	<a href="about.html" class="hero-btn">Visit us to know more</a> <!--- creating a link text with class hero-btn-->
+		
+		
+		</div>
+    
+    
+    
+    </section>
+		<!------------created a new section-------->
+	<!-------------Services--------------->
+	
+<section class="services">
+    
+    <h1>Our Services</h1>
+    <p>Below are a wide range of services we provide</p>
+    
+    <div class="row">
+     <div class="service-col">
+		<h3>PRINTING SERVICES</h3>
+		 <p>We offer printing services through<br>many types of printing.</p>
+		
+		
+		</div>
+		
+		 <div class="service-col">
+		<h3>ITEMS SUPPLY SERVICES</h3>
+		 <p>We supply quality items, both in large and small<br>numbers.</p>
+		
+		
+		</div>
+		
+		
+		 <div class="service-col">
+		<h3>EMBROIDERY SERVICES</h3>
+		 <p>We have a skilled technique of decorating fabric or other<br>materials with threads.</p>
+		
+		
+		</div>
+		
+		</div>
+    <a href="Services.html" class="ser-btn">More About Services!</a>
+    
+</section>
+    
+    
+
+	<!------------------------------ Gallery ---------------------->
+	<!------------------------------ new section ---------------------->
+	<section class="GALLERY">
+	<h1> GALLERY</h1>
+		<p>Have a look at what we have done previously.</p>
+		<div class="row">
+		  <div class="GALLERY-col">
+			
+			<img src="Images/Embroidery.png"> <!-----------inserted image within the div---->
+			  <div class="layer"> <!------------create a div called layer for a layer effect with the name--->
+			  <h3>Embroidery</h3>
+			  </div>
+			
+			
+			
+			</div>
+		
+			  <div class="GALLERY-col">
+			
+			<img src="Images/Stickers.png">
+			  <div class="layer">
+			  <h3>Stickers</h3>
+			  </div>
+			
+			
+			
+			</div>
+		
+		  <div class="GALLERY-col">
+			
+			<img src="Images/Ethasha!.jpg">
+			  <div class="layer">
+			  <h3>LOGO'S</h3>
+			  </div>
+			
+			
+			
+			</div>
+			
+		
+			
+			
+			
+			</div>
+		
+			<div class="row">
+		  <div class="GALLERY-col">
+			
+			<img src="Images/BillBoards.png">
+			  <div class="layer">
+			  <h3>Light Boxes & BillBoards</h3>
+			  </div>
+			
+			
+			
+			</div>
+				
+				 <div class="GALLERY-col">
+			
+			<img src="Images/Decals.png">
+			  <div class="layer">
+			  <h3>Decals</h3>
+			  </div>
+			
+			
+			
+			</div>
+				
+				 <div class="GALLERY-col">
+			
+			<img src="Images/Items.png">
+			  <div class="layer">
+			  <h3>Corporate Items</h3>
+			  </div>
+			
+			
+			
+			</div>
+				
+				
+		</div>
+				 
+	
+	</section>
+    <!-----------Create section for our recent work----------->
+    
+    <section class="recent">
+     	<h1> OUR RECENT WORK</h1>
+		<p>Have a look at what we have done recently.</p>
+		<div class="row">
+		  <div class="rec">
+			
+			<img src="Images/1.JPG"> <!-----------inserted image within the div---->
+			
+			</div>
+		
+			  <div class="rec">
+			
+			<img src="Images/2.JPG">
+			  
+			</div>
+		
+		  <div class="rec">
+			
+			<img src="Images/3.JPG">
+			  
+			</div>
+			
+		
+			
+			
+			
+			</div>
+		
+			<div class="row">
+		  <div class="rec">
+			
+			<img src="Images/9.JPG">
+			  
+			</div>
+				
+				 <div class="rec">
+			
+			<img src="Images/14.png">
+			
+			</div>
+				
+				 <div class="rec">
+			
+			<img src="Images/4.jpeg">
+			  
+			</div>
+				
+				
+		</div>
+				 
+    </section>
+	<!------------------------------------ Design---------------------->
+	
+	<!------------------------------------  creating new section---------------------->
+	<!------------------- Testimonials-------------------> 
+	<!------------------- Create new section------------------->
+	 <section class="testimonial">
+	<h1> What Our Customers Think</h1>
+		 <p>This is what some of our potential customers think about us.</p>
+		 
+		<div class="row">
+		 <div class="testimonial-col">
+			<img src="Images/person3.jpg"> <!--------------ading user image ---->
+			 
+			<div>
+			 
+			 <p>Geogra offers quality designs, I mean top quality.</p> 
+			 
+				<h3>Tangeni Bond</h3> <!-------------------user name------->
+				<i class="fa fa-star"></i>  <!--------------respective icons pasted----------->
+				<i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star-half"></i>
+			
+			 
+			 </div>
+			
+			
+			</div>
+			
+			 <div class="testimonial-col">
+			<img src="Images/People.jpg">
+			 
+			<div>
+			 
+			 <p>I got my banner and I like it. This is so breathtaking!</p>
+			 
+				<h3>Rose Newman</h3>
+				<i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+				<i class="fa fa-star"></i>
+			
+				
+
+			
+
+				
+				
+			 </div>
+			
+			
+			</div>
+		 
+		 </div>
+	
+	
+	
+	</section>
+	
+	
+	
+	
+	
+	<!-------------------- Call to action ---------------->
+	
+	<section class="cta">
+	<h1>Enquire about our various services<br>Anywhere from the world</h1>
+		
+	<a href="Contact%20Us.html" class="hero-btn">CONTACT US</a> <!--------------- define a "A" anchor tag for a contact link--> 
+	
+	
+	
+	
+	</section>
+	
+	
+	
+	
+	<!_________________________________ About Us------------------------->
+	
+	<section class="footer">
+	<h4>About Us</h4>
+	<p>Geogra Media & Printing is a company under Geogra Investments CC<br>
+that specializes in printing and media work with a potential of<br>
+delivering the proper service effeciently and effectively<br> to its clients.  </p>
+		
+	<div class="icons">
+		
+		<i class="fa fa-comment"></i>
+		<i class="fa-brands fa-facebook"></i>
+		<i class="fa-brands fa-whatsapp"></i>
+		<i class="fa-brands fa-instagram"></i>
+		
+		</div>
+		<p class="developer"> Made with <i class="fa fa-heart"></i> by DURO & Namibian_Jarule</p>
+	</section>
+	
+	
+	
+	<!-----------------JAVAScript for toggle Menu  ------------------------->
+	<!------------created a var navlinks and told it to get element from navlinks id-------->
+		<!------------create a function-------->
+
+<script>
+	
+	var navLinks = document.getElementById("navLinks"); 
+		function showMenu(){
+		navLinks.style.right = "0";
+	}
+	function hideMenu(){
+		navLinks.style.right = "-200px";
+	}
+	</script>
+</body>
+</html>

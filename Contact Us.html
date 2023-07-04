@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geogra.com.na</title>
+	<meta name="Author" content=""/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,800;1,600;1,800;1,900&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+</head>
+<body>
+<section class="sub-header">
+    
+    <nav>
+    <a href="index.html"><img src="Images/Logo.png"</a>
+		<div class="layer1">
+		<h3>Geogra Media & Printing Services</h3>
+		</div>
+        
+    <div class="nav-links" id="navLinks">
+		<i class="fa fa-times" onclick="hideMenu()"></i>
+        
+        <ul>
+        <li><a href="index.html">HOME</a>  </li>
+            <li><a href="about.html">ABOUT</a>  </li>
+            <li><a href="Services.html">SERVICES</a>  </li>
+            <li><a href="Blog.html">BLOG</a>  </li>
+            <li><a href="Contact%20Us.html">CONTACT US</a>  </li>
+        
+        
+        
+        </ul>
+        </div>
+		<i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+		
+	<h1>Contact Us</h1>	
+    
+    </section>
+	<!-------------------------------- Contact Us Content ----------------------------------->
+    
+    
+<section class="location"> 
+    
+    
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2083.793322775566!2d16.4347794317527!3d-28.554484345775187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1c408511da87c77f%3A0x9d0f22268ccb680d!2sGeogra%20Media%20%26%20Print!5e0!3m2!1sen!2sna!4v1687951321510!5m2!1sen!2sna" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    
+    
+     </section>
+    
+    
+    <section class="contact-us">
+    
+    <div class="row">
+        
+        <div class="contact-col">
+        
+            <div>
+            <i class="fa fa-home"></i>
+            
+            <span>
+                
+            <h5>Oranjemund, East Gate, Shop 28</h5>
+                <P>Situated within the East Gate Mall</P>
+                
+                
+                </span>    
+                
+            </div>
+            
+                <div>
+            <i class="fa fa-phone"></i>
+            
+            <span>
+                
+            <h5>+264 63 234 064</h5>
+                <P>Monday to Friday, 08h30 to 17h30<br>Saturday, 09h00 to 14h00</P>
+                
+                
+                </span>    
+                
+            </div>
+            
+                <div>
+            <i class="fa fa-envelope"></i>
+            
+            <span>
+                
+            <h5>admin@geogra.com.na<br>info@geogra.com.na</h5>
+                <P>Email us your query</P>
+                
+                
+                </span>    
+                
+            </div>
+        
+        </div>
+        
+        
+        <div class="contact-col">
+            <!-------------------------------------------create form to get user details---------->
+            
+        <form action="mail.php" method="post">
+        <input type="text" name="nameS" placeholder="Enter your name" required>
+        <input type="email" name="emailS" placeholder="Enter Email address" required>
+        <input type="text" name="subject" placeholder="Enter your Subject" required>
+            
+            <!--------------------------------------------------create text area for user with 8 rows-->
+        <textarea rows="8" name="message" placeholder="Message" required></textarea>
+            
+            <!-------------------------------------------create subition button---------->
+            
+            <button type="submit" class="hero-btn red-btn">Send Message</button>
+            
+            
+            
+            </form>
+        
+        
+        
+        
+        </div>
+        
+     
+    
+    </section>
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	<!_________________________________ About Us------------------------->
+	
+	<section class="footer">
+	<h4>About Us</h4>
+	<p>Geogra Media & Printing is a company under Geogra Investments CC<br>
+that specializes in printing and media work with a potential of<br>
+delivering the proper service effeciently and effectively<br> to its clients. </p>
+	<div class="icons">
+		
+	<i class="fa fa-comment"></i>
+		<i class="fa-brands fa-facebook"></i>
+		<i class="fa-brands fa-whatsapp"></i>
+		<i class="fa-brands fa-instagram"></i>
+		
+		</div>
+		<p class="developer"> Made with <i class="fa fa-heart"></i> by DURO & Namibian_Jarule</p>
+	</section>
+	
+	
+	
+	<!-----------------JAVAScript for toggle Menu  ------------------------->
+
+<script>
+	
+	var navLinks = document.getElementById("navLinks");
+		function showMenu(){
+		navLinks.style.right = "0";
+	}
+	function hideMenu(){
+		navLinks.style.right = "-200px";
+	}
+	</script>
+</body>
+</html>

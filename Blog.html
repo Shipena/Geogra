@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>geogra.com.na</title>
+	<meta name="Author" content=""/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,800;1,600;1,800;1,900&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+</head>
+<body>
+<section class="sub-header">
+    
+    <nav>
+    <a href="index.html"><img src="Images/Logo.png"</a>
+		<div class="layer1">
+		<h3>Geogra Media & Printing Services</h3>
+		</div>
+        
+    <div class="nav-links" id="navLinks">
+		<i class="fa fa-times" onclick="hideMenu()"></i>
+        
+        <ul>
+        <li><a href="index.html">HOME</a>  </li>
+            <li><a href="about.html">ABOUT</a>  </li>
+            <li><a href="Services.html">SERVICES</a>  </li>
+            <li><a href="Blog.html">BLOG</a>  </li>
+            <li><a href="Contact%20Us.html">CONTACT US </a>  </li>
+        
+        
+        
+        </ul>
+        </div>
+		<i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+	<!-------------------------------------------Blog content---------------------------------->	
+	<h1>Blog</h1>	
+    
+    </section>
+<!-------------------------------------------Blog content---------------------------------->
+<section id="blog">
+    <div class="blog-container">
+       <div class="blog-box">
+           <div class="blog-img">
+             <img src="Images/Komesho.jpeg" alt="Blog">
+           </div>
+           <div class="blog-text">
+             <span>26 June 2023</span>
+            <h1 class="blog-titles">KOMESHO SKILLS DEVELOPMENT</h1>
+            <p>We worked on the billboard for Komesho Skills Development and the results were so breathtaking. The design, print, labour and everything it took to bring the board up was done by us(Geogra Media & Print). We will gladly serve you should you need the same service for either you or your business.</p>
+            <a href="Services.html">Read More About Billboards</a>
+           </div>
+         </div>
+        <div class="blog-box">
+           <div class="blog-img">
+             <img src="Images/bend.jpeg" alt="Blog">
+           </div>
+           <div class="blog-text">
+             <span>26 June 2023</span>
+            <h1 class="blog-titles">DAILY EMBROIDING</h1>
+            <p>Depending on your design, we can customize your hats, t-shirts, hoodies, and similar embroidery apparel with 2 embroidery styles: Flat or 3D Puff, as well as small and large embroidery area product options. We will gladly serve you should you need the above mentioned service for either you or your business.</p>
+            <a href="Services.html">Read More About Embroidery</a>
+           </div>
+         </div>
+        <div class="blog-box">
+           <div class="blog-img">
+             <img src="Images/4.jpeg" alt="Blog">
+           </div>
+           <div class="blog-text">
+             <span>26 June 2023</span>
+            <h1 class="blog-titles">B&E Billboard</h1>
+            <p>We've been working on a billboard for B&E lately. Click on the link below to see more about what we've been to lately.</p>
+            <a href="index.html">See What We Have been to lately</a>
+           </div>
+         </div>
+    </div>
+    </section>
+    
+<section class="blog-content">
+	
+	<div class="row">
+	<div class="blog-left">
+		
+        <div class="comment-box">
+        
+        <h3>Leave a Comment</h3>
+            
+            <form class="comment-form" action="mail.php" method="post">
+            
+            <input type="text" placeholder="Enter Name">
+            <input type="email" placeholder="Enter Email">
+
+                <textarea rows="5" placeholder="Your Comment"></textarea>
+            <button type="submit" class="hero-btn red-btn">Post Comment</button>
+            
+            
+            
+            
+            
+            </form>
+        
+        
+        
+        
+        </div>
+        
+		</div>
+	
+	</section>
+	
+	
+	
+	
+	<!_________________________________ About Us------------------------->
+	
+	<section class="footer">
+	<h4>About Us</h4>
+	<p>Geogra Media & Printing is a company under Geogra Investments CC<br>
+that specializes in printing and media work with a potential of<br>
+delivering the proper service effeciently and effectively<br> to its clients. </p>
+	<div class="icons">
+		
+	<i class="fa fa-comment"></i>
+		<i class="fa-brands fa-facebook"></i>
+		<i class="fa-brands fa-whatsapp"></i>
+		<i class="fa-brands fa-instagram"></i>
+		
+		</div>
+		<p class="developer"> Made with <i class="fa fa-heart"></i> by DURO & Namibian_Jarule</p>
+	</section>
+	
+	
+	
+	<!-----------------JAVAScript for toggle Menu  ------------------------->
+
+<script>
+	
+	var navLinks = document.getElementById("navLinks");
+		function showMenu(){
+		navLinks.style.right = "0";
+	}
+	function hideMenu(){
+		navLinks.style.right = "-200px";
+	}
+	</script>
+</body>
+</html>

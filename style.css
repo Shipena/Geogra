@@ -1,0 +1,987 @@
+/*-------------------------------------- applys to all elements in page---------------------*/
+
+*{         /* customizing all elements within page using the "*", allowing paddings and fonts */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+	font-family: 'Poppins', sans-serif; /* add the fonts link in the index and here too since the css is link */
+}
+
+/*--------------------------------------Customizing the header --------------------------------*/
+
+.header{  /* call on the header class which defines the section header and customize its elements */
+    min-height: 100vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(10,1,19,0.3),rgba(10,30,19,0.2)),url(images/GeoProfile.jpg) /* adding background image */
+        ;
+    background-position: center;  /*customizing the image */
+    background-size: cover;
+    position: relative;
+}
+
+
+/*-------------------------------- Customizing the Nav tags in header --------------------------------*/
+
+NAV{  /* customize the nav tag with padding for space */
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* customizing logo image */
+nav img{   
+    width: 200px;
+    
+}  /* customizing the links, use flex 1 so they occupy entire row */ 
+.nav-links{
+    flex: 1;
+    text-align: right; /*  put text on right side*/
+}
+   /* customize the lists */
+.nav-links ul li{
+    list-style: none; /* use none so there are no bullets */
+    display: inline-block; /* inline block allow thew to display horizontally */
+    padding: 8px 12px;
+    position: relative;
+} /* changing colour for links using keyword "a" for anchor tag  */
+.nav-links ul li a{
+	
+	color: #fff;
+	text-decoration: none;
+	font-size: 13;
+}
+
+
+/* creating hover effect over links text but creates a solid vissble horizontal line*/
+.nav-links ul li::after{
+	content: '';
+	width: 0%;  /*  we change width to zero so the solid horizontal line is not visible */
+	height: 2px;
+	background: #f44336;
+	display: block;
+	margin: auto;
+	transition: 0.5s; /* transition time*/
+}
+  /* we create this to ensure the bar shows when we put cursor */
+.nav-links ul li:hover::after{
+	width:100%;
+}
+
+/*  customizing content of the nav class textbox */
+.text-box{
+	
+	width: 90%;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+/* customizing textbox  title */
+.text-box h1{
+	
+	font-size: 40px;
+}
+
+/* customizing textbox  paragraph */
+.text-box p{
+	margin: 10px 0 40px;
+	font-size: 18px;
+	color:#fff;
+}	
+
+/* customizing clickable link below text box  */
+.hero-btn{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 12px 34px;
+	font-size: 15px;
+	background: transparent;
+	cursor: pointer;
+}
+
+/* customizing clickable link to have hover effect */
+.hero-btn:hover{
+	border: 1px solid #f44336;
+	background: #f44336;
+	transition: 2s;
+}
+.ser-btn{
+	display: inline-block;
+	text-decoration: none;
+	color: #f44336;
+	border: 1px solid #f44336;
+	padding: 12px 34px;
+	font-size: 15px;
+	background: transparent;
+	cursor: pointer;
+}
+
+/* customizing clickable link to have hover effect */
+.ser-btn:hover{
+	border: 1px solid #f44336;
+	background: #fff3f4;
+	transition: 2s;
+}
+
+/* nb!!! ensure nav.fa appears outside the @media so we block the closing and menu icon from showing in desktop view */
+nav .fa{
+	display: none;
+}
+
+/*---------------------------------------------------- @media-----------------------------------*/
+
+/* Making sure content shows smoothly on android devices */
+
+/* customizing px width to 700, we do this for every element that has big img n text*/
+@media(max-width: 700px){
+	.text-box h1{
+		font-size: 17px;
+	}
+    
+.text-box p{
+       font-size: 14px; 
+    }
+	.nav-links ul li{ /* customizing links for device with menu but menu is visible in android mode */
+		display:block;
+	}
+	.nav-links{                        /* for the menu on android */
+		position: fixed;
+		background: #f44336;
+		height: 100vh;
+		width: 200px;
+		top: 0;
+		right:-200px; /* to make the menu in android mode hidden*/
+		text-align: left;
+		z-index: 2;
+		transition: 1s;
+		}
+	nav .fa{ /* to ensure the icons show in android view, must be at */
+		display: block;
+		color: #fff;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+	/* customizing the padding between links*/
+	.nav-links ul{
+		padding: 25px;
+	}
+	
+}
+
+@media(max-width: 700px){
+    
+	
+	.row{ /* "Services section" rows in services need to be customized, better for android view*/
+		flex-direction: column;
+	}
+    
+
+    
+    .row p{
+     font-size: 12px;   
+    }
+	
+}
+/* customizing the testimonial content to look better on android device*/
+@media(max-width:700px){
+	
+	.testimonial-col img{
+		margin-left: 0px;
+		margin-right: 15px;
+	}
+}
+/* customizing the cta text n font to fit on android device*/
+@media(max-width:700px){
+  
+    }
+    
+
+	.cta h1{
+		font-size: 24px;
+	}
+    
+    /* customize the font size of the sub-header in blog--------------------*/
+    
+    @media(max-width:700px){
+        .sub-header h1{
+            font-size: 24px;
+        }
+    }
+
+/*-------------------------- Customize the image on the about page to disallow scrolling on----------*/
+
+@media(max-width:700px){
+    
+    .about-col img{
+        
+        margin-left: -100px;
+        margin-right: auto;
+        display: block;
+        padding-top: 50px;
+    }
+}
+
+
+/*-----------------------------------------services Section------------*/
+/* customizing service section */
+
+.services{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.services h1{
+    
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.services p{
+    
+ color: #777;
+ font-size: 14px;
+ font-weight: 300;
+line-height: 22px;
+padding: 10px;
+}
+
+/* customize title in services*/
+.services h3{
+	text-align: center;
+	font-weight: 600;
+	margin: 10px;
+}
+
+
+/*------------------------customize the row columns in services---------------------*/
+
+.row{
+	margin-top: 5%;
+	display:flex; /* all elements will be in columns */
+	justify-content: space-between;
+}
+/*-------- customizing div class with services to allow for background color----- */
+.service-col{
+	flex-basis: 31%; /* determines the size of which column will be greater*/
+	background: #fff3f3;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	padding: 20px 10px;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+
+/* creating a hover effect over services box*/
+.service-col:hover{
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+
+/* ----------------------------------------------- gallery---------------------------------------- */
+/* customize gallery section n */
+.GALLERY{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 60px;
+}
+
+.GALLERY h1{
+    
+    font-size: 36px;
+    font-weight: 600;
+}
+
+
+.GALLERY p{
+    
+ color: #777;
+ font-size: 14px;
+ font-weight: 300;
+line-height: 22px;
+padding: 10px;
+}
+
+
+
+/* customize the div class for gallery col*/
+.GALLERY-col{
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+	
+}
+/* customizing the img*/
+.GALLERY-col img{
+ width: 100%;
+display: block; /* make image corner round*/
+}
+/* customize layer effect with hidden background*/
+.layer{
+	background: transparent;
+	height: 100%;
+    width:100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+/* creating a hover effect over img*/
+.layer:hover{
+background:rgba(226,0,0,0.2)
+}
+/* customize title and animate it ontop of img*/
+.layer h3{
+	
+width: 100%;
+font-weight: 500;
+color: #fff;
+font-size: 26px;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+position: absolute;
+opacity: 0;
+transition: 0.5s;
+}
+/* creating text to hover when cursor is on it*/
+.layer:hover h3{
+	bottom: 49%;
+	opacity: 1;
+}
+/*------------------------photos-----------------*/
+.recent{
+    background: cadetblue;
+    padding: 10px;
+}
+.recent{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 60px;
+}
+
+.recent h1{
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.recent p{
+
+ color: white;
+ font-size: 14px;
+ font-weight: 300;
+line-height: 22px;
+padding: 10px;
+    text-align: center;
+}
+
+
+
+/* customize the div class for gallery col*/
+.rec{
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	position: relative;
+	overflow: hidden;
+	transition: 0.5s;
+}
+/* customizing the img*/
+.rec img{
+ width: 100%;
+display: block; /* make image corner round*/
+}
+
+/* creating a hover effect over pics box*/
+.rec:hover{
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.9);
+}
+
+
+/*------------------------------------ design ------------------------------------------------------------------*/
+/* customizing the section */
+.design{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+
+.design h1{
+    
+    font-size: 36px;
+    font-weight: 600;
+}
+
+
+.design p{
+    
+ color: #777;
+ font-size: 14px;
+ font-weight: 300;
+line-height: 22px;
+padding: 10px;
+}
+
+/* customize the div col for the elements*/
+.design-col{
+	flex-basis: 31%;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	text-align: left;
+	
+}
+/* customize image */
+.design-col img{
+	
+	width: 100%;
+	border-radius: 10px;
+}
+/* customize the paragraph */
+.design-col p{
+	padding: 0;
+}
+/* Customize the title */
+.design-col h3{
+	margin-top: 16px;
+	margin-bottom: 15px;
+	text-align: left;
+}
+
+
+
+
+
+
+/*------------------------------------------Testimonial------------------------------------------*/
+
+/* customizing the section testimonial*/
+	.testimonial{
+width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 100px;
+}
+
+.testimonial h1{
+    
+    font-size: 36px;
+    font-weight: 600;
+}
+
+
+.testimonial p{
+    
+ color: #777;
+ font-size: 14px;
+ font-weight: 300;
+line-height: 22px;
+padding: 10px;
+}
+/* customizing the div col with all elements*/
+.testimonial-col{
+	flex-basis: 40%;
+	border-radius: 10px;
+	margin-bottom: 5%;
+	text-align: left;
+	background: #fff3f3;
+	padding: 25px;
+	cursor: pointer;
+	display: flex;
+}
+/* customizing the section testimonial img*/
+.testimonial-col img{
+	
+	height: 80px;
+	margin-left: 5px;
+	margin-right: 30px;
+	border-radius: 50%;
+	
+}
+/* customizing the paragraph*/
+.testimonial-col p{
+	padding: 0;
+}
+/* customizing the title*/
+.testimonial-col h3{
+	margin-top: 15px;
+	text-align: left;
+}
+/* customizing the color of the star icons*/
+.testimonial-col .fa{
+	color: coral;
+}
+
+/*----------------------------Call to action----------------------*/
+
+.cta{
+	margin: 100px;
+	width: 80%;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)),url(images/boardroom.jpg);/*bkgr img*/
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+	padding: 100px 0;
+}
+/* customizing the title in cta*/
+.cta h1{
+color:#fff;
+margin-bottom: 50px;
+ font-size: 40px;   
+	padding: 0;
+}
+
+/*------------------------------------------Footer-------------------------*/
+
+/* customizing the text and padding*/
+.footer{
+	width: 100%;
+	text-align: center;
+	padding: 30px 0;
+	
+	/* customizing the title*/
+}
+.footer h4{
+	margin-bottom: 25px;
+	margin-top: 20px;
+	font-weight: 600;
+}
+.developer{
+font-style: italic;
+}
+
+
+
+.icons .fa ,.fa-brands{ /* to customize the icons but the icons have different "fa / fa-brands" tag names*/ 
+	color: #f44336;
+	margin: 0 13px;
+	cursor: pointer;
+	padding: 18px 0;
+}
+
+
+
+.fa-heart{
+	color: #f44336;
+}
+
+
+/*--------------------------------About Us Page----------------------------------*/
+   /* customize the about us page*/
+.sub-header{
+	height: 50vh;
+	width: 100%;
+	background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/background3.jpg);/* add bgkg img */
+	background-position: center;
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+	color: #fff;
+}
+a{
+    text-decoration: none;
+}
+.founder{
+    text-align: center;
+}
+.director{
+	width: 100%;
+	margin: auto;
+    padding: 15px;
+	text-align: center;
+	padding-top: 100px;
+    background: cadetblue;
+}
+.director h1{
+    font-weight: 550;
+    font-size: 35px;
+    color: white;
+}
+.bod{
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+    transition: 0.5s;
+	
+}
+/* customizing the img*/
+.bod img{
+ width: 100%;
+display: block; /* make image corner round*/
+}
+.bod:hover{
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.9);
+}
+    
+    /*----------------------------- no line under a anchor tag --------------------------------*/
+}
+
+.sub-header a{
+    
+    text-decoration: none;
+}
+/* Customize logo title */
+.sub-header h3{
+	color: white;
+	margin-top: -25px;
+	
+}
+/* Customize about us title */
+.sub-header h1{
+	margin-top: 80px;
+}
+
+
+/* cUSTOMIZING div content*/
+.about-us{
+width: 80%;
+margin: auto;
+padding-top: 80px;	
+padding-bottom: 50px;		
+	
+}
+
+
+
+/*customize the column settings  */
+.about-col{
+	flex-basis: 48%;
+	padding: 20px 2px;
+}
+/* Customize the image*/
+.about-col img{
+	width: 80%;
+	position: relative;
+	padding-left: 200px;
+	border-radius: 10px;
+	display: flex;
+	
+}
+/* Customize title of the column*/
+.about-col h1{
+	padding-top: 0px;
+}
+/* Customize para of the  column*/
+.about-col p{
+	padding: 15px 0 25px;
+}
+/* change color of busston and backg with text color*/
+.red-btn{
+	border: 1px solid #f44336;
+	background:transparent;
+	color: #f44336;
+	
+}/* allow text color to change to white when we hover*/
+.red-btn:hover{
+	color: white;
+}
+/* customize the meet team*/
+.Aboutteam{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	padding-top: 60px;
+}
+.meet-team{
+	flex-basis: 32%;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	position: relative;
+	overflow: hidden;
+	
+}
+/* customizing the img*/
+.meet-team img{
+ width: 100%;
+height: 100%;
+	border-radius: 50%; /* make image round*/
+}
+/* customize layer effect with hidden background*/
+.team{
+	background: transparent;
+	height: 100%;
+    width:100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.5s;
+}
+/* creating a hover effect over img*/
+.team:hover{
+    width: 400px;
+height: 400px;
+    	margin-left: 10px;
+	margin-right: 30px;
+    border-radius: 50%;
+}
+/* customize title and animate it ontop of img*/
+.team h3{
+	
+width: 100%;
+font-weight: 500;
+color: orange;
+font-size: 25px;
+bottom: 25%;
+left: 50%;
+transform: translateX(-50%);
+position: absolute;
+opacity: 0;
+transition: 0.5s;
+}
+.team p{
+	
+width: 100%;
+font-weight: 400;
+color: darkorange;
+font-size: 16px;
+bottom: 20%;
+left: 50%;
+transform: translateX(-50%);
+position: absolute;
+opacity: 0;
+transition: 0.5s;
+}
+/* creating text to hover when cursor is on it*/
+.team:hover h3{
+	bottom: 40%;
+	opacity: 1;
+    left: 58%;
+}
+.team:hover p{
+	bottom: 30%;
+	opacity: 1;
+    left: 58%;
+}
+@media screen and (max-width:770px){
+    .team:hover h3{
+        font-size: 16px;
+         left: 38%;
+        bottom:50%;
+    }
+    .team:hover p{
+        font-size: 13px;
+	bottom: 40%;
+	opacity: 1;
+    left: 38%;
+    }
+}
+
+/*-----------------------------blog page-------------------------------*/
+
+
+.blog-content{
+	width: 80%;
+	margin: auto;
+	padding: 60px 0;
+}
+
+.blog-left{
+flex-basis: 65%;
+}
+.blog-left img{
+	width: 60%;
+	
+}
+
+.blog-left h2{
+	color: #222;
+	font-weight: 600;
+	margin: 30px 0;
+}
+
+.blog-left p{
+	color: #999;
+	padding-right: 0px;
+	
+}
+.blog-right{
+    flex-basis: 32%;
+}
+.blog-right h3{
+    background: #f44336;
+    color: #fff;
+    padding: 6px 0;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.blog-right div{
+    display: flex;
+    align-items: center;
+        justify-content:space-between;
+    color: #555;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.comment-box{
+   text-align: center;
+    border: 2px solid #ccc;
+    margin: 100px 20px;
+    margin-left: 70px  70px;
+    padding: 10px 20px;
+    padding-left: 20px 20px;
+    
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-form input, .comment-form textarea{
+ 
+    width: 100%;
+    padding: 20px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+
+.comment-form button{
+    margin: 10px 0;
+}
+.blog-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    flex-wrap: wrap;
+}
+.blog-box{
+    width: 350px;
+    background-color: cadetblue;
+    border: 1px solid orange;
+    margin: 20px;
+}
+.blog-img{
+    width: 100%;
+    height: auto;
+}
+.blog-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.blog-text{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.blog-text span{
+    color: white;
+    font-size: 0,9rem;
+}
+.blog-text .blog-title{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+}
+.blog-text .blog-title:hover{
+    color: orange;
+    transition: all ease 0.3s;
+}
+.blog-text p{
+    color: white;
+    font-size: 0.9rem;
+   
+    margin: 20px 0px;
+}
+.blog-text a{
+    color: orange;
+}
+.blog-text a:hover{
+    color: white;
+    transition: all ease 0.3s;
+}
+
+/*-------------------------- Contact Us page --------------------------*/
+
+/*--------------- customize the location section --------------*/
+
+.location{
+
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+    
+ /*------------------------- customize the google maps ------*/
+}
+
+.location iframe{
+    width: 100%;
+    border-radius: 50px;
+}
+
+/*----------------------------customize the contact details and icons------------------*/
+
+.contact-us{
+    
+    width: 80%;
+    margin: auto;
+    
+}
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+    
+}
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    
+}
+.contact-col div .fa{
+    
+    font-size: 28px;
+    color: #f44336;
+    margin: 10px;
+    margin-right: 30px;
+    
+}
+.contact-col div p{
+    padding: 0;
+    font-style: italic;
+}
+.contact-col div h5{
+font-size: 20px;
+    padding-top: 19px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+    
+
+}
+
+
+/*-----------customizing the form n textarea-------------------*/
+.contact-col input, .contact-col textarea{
+    
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+   
+
+
+}
+
